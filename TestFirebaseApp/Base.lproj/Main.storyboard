@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestFirebaseApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kip-JZ-ENf">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="96U-Pq-z1A" kind="show" id="7v8-Xr-Pgk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kip-JZ-ENf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EX6-IA-Afx"/>
+                            <constraint firstItem="Kip-JZ-ENf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EkM-pc-ZQe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Google Sign In View Controller-->
+        <scene sceneID="WbJ-vr-WGs">
+            <objects>
+                <viewController id="96U-Pq-z1A" customClass="GoogleSignInViewController" customModule="TestFirebaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uOY-to-DuI"/>
+                        <viewControllerLayoutGuide type="bottom" id="kdr-xI-WrI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ap-od-lkb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sign in with google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSN-9z-yFB">
+                                <rect key="frame" x="228" y="28" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-JP-imI">
+                                <rect key="frame" x="279" y="285" width="43" height="30"/>
+                                <state key="normal" title="SignIn"/>
+                                <connections>
+                                    <action selector="didTapSignIn:" destination="96U-Pq-z1A" eventType="touchUpInside" id="qIz-SU-2As"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6N-U7-9xX">
+                                <rect key="frame" x="272" y="323" width="56" height="30"/>
+                                <state key="normal" title="SignOut"/>
+                                <connections>
+                                    <action selector="didTapSignOut:" destination="96U-Pq-z1A" eventType="touchUpInside" id="BF1-cd-eub"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDm-IY-QuZ">
+                                <rect key="frame" x="261" y="57" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z6N-U7-9xX" firstAttribute="top" secondItem="Ufd-JP-imI" secondAttribute="bottom" constant="8" id="9X1-JE-e05"/>
+                            <constraint firstItem="zDm-IY-QuZ" firstAttribute="centerX" secondItem="9ap-od-lkb" secondAttribute="centerX" id="B19-VR-MPf"/>
+                            <constraint firstItem="zDm-IY-QuZ" firstAttribute="top" secondItem="oSN-9z-yFB" secondAttribute="bottom" constant="8" id="Ulh-se-pru"/>
+                            <constraint firstItem="Z6N-U7-9xX" firstAttribute="centerX" secondItem="9ap-od-lkb" secondAttribute="centerX" id="XmH-Wn-cLf"/>
+                            <constraint firstItem="oSN-9z-yFB" firstAttribute="centerX" secondItem="9ap-od-lkb" secondAttribute="centerX" id="ZRY-GP-tyK"/>
+                            <constraint firstItem="Ufd-JP-imI" firstAttribute="centerX" secondItem="9ap-od-lkb" secondAttribute="centerX" id="aPN-C1-dbZ"/>
+                            <constraint firstItem="Ufd-JP-imI" firstAttribute="centerY" secondItem="9ap-od-lkb" secondAttribute="centerY" id="hOb-rf-nDx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbUserName" destination="zDm-IY-QuZ" id="rh6-cP-cyQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PV5-hl-Orh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="306"/>
         </scene>
     </scenes>
 </document>

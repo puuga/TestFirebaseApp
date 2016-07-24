@@ -15,9 +15,10 @@
 		418DEA4F1D449CE700D49A5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418DEA4D1D449CE700D49A5A /* LaunchScreen.storyboard */; };
 		418DEA5A1D449CE700D49A5A /* TestFirebaseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418DEA591D449CE700D49A5A /* TestFirebaseAppTests.swift */; };
 		418DEA651D449CE700D49A5A /* TestFirebaseAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418DEA641D449CE700D49A5A /* TestFirebaseAppUITests.swift */; };
-		418DEA731D449D3400D49A5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418DEA721D449D3400D49A5A /* GoogleService-Info.plist */; };
-		418DEA741D449D3400D49A5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418DEA721D449D3400D49A5A /* GoogleService-Info.plist */; };
-		418DEA751D449D3400D49A5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418DEA721D449D3400D49A5A /* GoogleService-Info.plist */; };
+		418DEA771D449F3600D49A5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418DEA761D449F3600D49A5A /* GoogleService-Info.plist */; };
+		418DEA781D449F3600D49A5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418DEA761D449F3600D49A5A /* GoogleService-Info.plist */; };
+		418DEA791D449F3600D49A5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418DEA761D449F3600D49A5A /* GoogleService-Info.plist */; };
+		41D48CA71D44BB69008792EE /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D48CA61D44BB69008792EE /* GoogleSignInViewController.swift */; };
 		916EC42083813E1B5A837DD3 /* Pods_TestFirebaseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFA7ED54254848CB37C6988 /* Pods_TestFirebaseApp.framework */; };
 		F07C7027C82837FFBE7CF3D7 /* Pods_TestFirebaseAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7E8283D256938B9E2F2DC /* Pods_TestFirebaseAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +55,9 @@
 		418DEA601D449CE700D49A5A /* TestFirebaseAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFirebaseAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		418DEA641D449CE700D49A5A /* TestFirebaseAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFirebaseAppUITests.swift; sourceTree = "<group>"; };
 		418DEA661D449CE700D49A5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		418DEA721D449D3400D49A5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		418DEA761D449F3600D49A5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41D48CA51D44B630008792EE /* TestFirebaseApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFirebaseApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		41D48CA61D44BB69008792EE /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		452FC683F9DC511A1B40A98F /* Pods-TestFirebaseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFirebaseApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFirebaseApp/Pods-TestFirebaseApp.release.xcconfig"; sourceTree = "<group>"; };
 		6C4690A4FC38DADEAE5142B1 /* Pods_TestFirebaseAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFirebaseAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A28B2915E08249EF6D6D53C /* Pods-TestFirebaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFirebaseApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFirebaseApp/Pods-TestFirebaseApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +140,9 @@
 				418DEA4B1D449CE700D49A5A /* Assets.xcassets */,
 				418DEA4D1D449CE700D49A5A /* LaunchScreen.storyboard */,
 				418DEA501D449CE700D49A5A /* Info.plist */,
-				418DEA721D449D3400D49A5A /* GoogleService-Info.plist */,
+				418DEA761D449F3600D49A5A /* GoogleService-Info.plist */,
+				41D48CA51D44B630008792EE /* TestFirebaseApp-Bridging-Header.h */,
+				41D48CA61D44BB69008792EE /* GoogleSignInViewController.swift */,
 			);
 			path = TestFirebaseApp;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				418DEA3F1D449CE700D49A5A /* Resources */,
 				02D8E07B8326656BA182D20B /* [CP] Embed Pods Frameworks */,
 				3A1F1393D0668A5DAAF0F261 /* [CP] Copy Pods Resources */,
+				418DEA7C1D44B18400D49A5A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -246,6 +252,7 @@
 				TargetAttributes = {
 					418DEA401D449CE700D49A5A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = XYW2JG27N9;
 					};
 					418DEA541D449CE700D49A5A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -283,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418DEA4F1D449CE700D49A5A /* LaunchScreen.storyboard in Resources */,
-				418DEA731D449D3400D49A5A /* GoogleService-Info.plist in Resources */,
+				418DEA771D449F3600D49A5A /* GoogleService-Info.plist in Resources */,
 				418DEA4C1D449CE700D49A5A /* Assets.xcassets in Resources */,
 				418DEA4A1D449CE700D49A5A /* Main.storyboard in Resources */,
 			);
@@ -293,7 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418DEA741D449D3400D49A5A /* GoogleService-Info.plist in Resources */,
+				418DEA781D449F3600D49A5A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418DEA751D449D3400D49A5A /* GoogleService-Info.plist in Resources */,
+				418DEA791D449F3600D49A5A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +344,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestFirebaseApp/Pods-TestFirebaseApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		418DEA7C1D44B18400D49A5A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Replace this path with the path to the key you just downloaded\nJSON_FILE=/Users/siwaweswongcharoen/Development/key/Test-iOS-f44f772bd3ff.json\n\n# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:442627285769:ios:70b139203cbe5873\n\ndefaults write com.google.SymbolUpload version -integer 1   # creates file if it does not exist\nJSON=$(cat \"${JSON_FILE}\")\n/usr/bin/plutil -replace \"app_${GOOGLE_APP_ID//:/_}\" -json \"${JSON}\" \"$HOME/Library/Preferences/com.google.SymbolUpload.plist\"\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym\n";
 		};
 		77864EA7F497C339C62EF132 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -435,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D48CA71D44BB69008792EE /* GoogleSignInViewController.swift in Sources */,
 				418DEA471D449CE700D49A5A /* ViewController.swift in Sources */,
 				418DEA451D449CE700D49A5A /* AppDelegate.swift in Sources */,
 			);
@@ -579,10 +600,14 @@
 			baseConfigurationReference = 9A28B2915E08249EF6D6D53C /* Pods-TestFirebaseApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TestFirebaseApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.puuga.TestFirebaseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "TestFirebaseApp/TestFirebaseApp-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -591,10 +616,14 @@
 			baseConfigurationReference = 452FC683F9DC511A1B40A98F /* Pods-TestFirebaseApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TestFirebaseApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.puuga.TestFirebaseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "TestFirebaseApp/TestFirebaseApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
